@@ -1,10 +1,10 @@
 interface DocumentIdPageProps {
-  params: Promise<{ documentID: string }>;
+  params: Promise<{ documentId: string }>;
 }
 
 const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
-  const awaitedProps = await params;
-  return <div>DocumentId : {awaitedProps.documentID}</div>;
+  const { documentId } = await params;
+  return <div>DocumentId : {documentId}</div>;
 };
 
 export default DocumentIdPage;
